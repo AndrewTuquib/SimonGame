@@ -14,6 +14,14 @@ $(document).keypress(function(){
     } 
 });
 
+$(document).click(function(){
+
+    if (hasStarted === false) {
+        nextSequence();
+        hasStarted = true;
+    } 
+});
+
 
 function nextSequence() {
     userClickedPattern = [];
