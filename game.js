@@ -58,8 +58,6 @@ function animatePress(currentColour){
     $("#"+currentColour).fadeOut(50).fadeIn(50);
     $("#"+currentColour).addClass("pressed");
 
-
-
     setTimeout(function(){
         $("#"+currentColour).removeClass("pressed");
     }, 100);
@@ -69,7 +67,7 @@ function startOver() {
     hasStarted = false;
     level = 0;
     gamePattern = [];
-     $("h1").text("Press A Key to Start")
+    $("h1").text("Press A Key to Start");
 }
 
 function updateHighScore() {
