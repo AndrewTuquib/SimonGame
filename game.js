@@ -67,6 +67,7 @@ function startOver() {
     level = 1;
     gamePattern = [];
     $("h1").text("Press A Key to Start");
+    currentScore = 0;
 }
 
 function updateHighScore() {
