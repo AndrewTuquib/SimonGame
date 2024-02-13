@@ -97,7 +97,7 @@ function checkAnswer(currentLevel) {
         setTimeout(function(){
             $("body").removeClass("game-over");
             startOver();
-        }, 7000);
+        }, 5000);
     }
 
 }
