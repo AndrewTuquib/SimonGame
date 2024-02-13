@@ -3,7 +3,7 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
 var hasStarted = false;
-var level = 0;
+var level = 1;
 var highScore = 0;
 
 $(document).keypress(function(){
@@ -65,7 +65,7 @@ function animatePress(currentColour){
 
 function startOver() {
     hasStarted = false;
-    level = 0;
+    level = 1;
     gamePattern = [];
     $("h1").text("Press A Key to Start");
 }
