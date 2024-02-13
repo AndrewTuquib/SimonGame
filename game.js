@@ -4,6 +4,7 @@ var gamePattern = [];
 var userClickedPattern = [];
 var hasStarted = false;
 var level = 1;
+var currentScore = 0;
 var highScore = 0;
 
 $(document).keypress(function(){
@@ -33,10 +34,9 @@ function nextSequence() {
     playSound(randomChosenColour);
     animatePress(randomChosenColour);
 
-    updateHighScore();
-
     $("#level-title").text("Level "+level);
     level ++;
+    currentScore++;
 }
 
 $(".btn").click(function(){
@@ -71,13 +71,10 @@ function startOver() {
 }
 
 function updateHighScore() {
-    if (highScore >= level){
-        highScore = highScore;
-    } else {
-        highScore = level;
+    if (highScore <= currentScore){
+        highScore = currentScore;
     }
 
-    highScore = highScore;
     $("#highScore").text("Highscore: "+highScore);
 }
 
