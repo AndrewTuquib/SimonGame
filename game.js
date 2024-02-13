@@ -36,7 +36,6 @@ function nextSequence() {
 
     $("#level-title").text("Level "+level);
     level ++;
-    currentScore++;
 }
 
 $(".btn").click(function(){
@@ -85,6 +84,8 @@ function checkAnswer(currentLevel) {
         setTimeout(function(){
             nextSequence();
         }, 1000);
+        currentScore++;
+        updateHighScore();
       }
 
     } else {
